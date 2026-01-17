@@ -1,6 +1,6 @@
 import { CardModule } from 'primeng/card';
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 
 
@@ -8,8 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-segmento',
   standalone: true,
-  imports: [CommonModule, CardModule
-  ],
+  imports: [CardModule],
   templateUrl: './segmento.component.html',
   styleUrl: './segmento.component.scss'
 })
