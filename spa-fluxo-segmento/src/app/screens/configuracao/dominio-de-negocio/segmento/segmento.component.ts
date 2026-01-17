@@ -1,12 +1,6 @@
+import { CardModule } from 'primeng/card';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { Select } from 'primeng/select';
-
-interface City {
-    name: string;
-    code: string;
-}
-
+import { CommonModule } from '@angular/common';
 
 
 
@@ -14,22 +8,38 @@ interface City {
 @Component({
   selector: 'app-segmento',
   standalone: true,
-  imports: [FormsModule, Select],
+  imports: [CommonModule, CardModule
+  ],
   templateUrl: './segmento.component.html',
   styleUrl: './segmento.component.scss'
 })
-export class SegmentoComponent implements OnInit {
-cities: City[] | undefined;
+export class SegmentoComponent  {
 
-    selectedCity: City | undefined;
+  situacoes = [
+    { label: 'Ativo', value: 'ATIVO' },
+    { label: 'Inativo', value: 'INATIVO' }
+  ];
 
-    ngOnInit() {
-        this.cities = [
-            { name: 'New York', code: 'NY' },
-            { name: 'Rome', code: 'RM' },
-            { name: 'London', code: 'LDN' },
-            { name: 'Istanbul', code: 'IST' },
-            { name: 'Paris', code: 'PRS' }
-        ];
-    }
+  situacaoSelecionada = 'ATIVO';
+
+  abas = [
+    { label: 'Segmento' },
+    { label: 'Conta' },
+    { label: 'Item Caixa' },
+    { label: 'Item Caixa x Item Sistema' },
+    { label: 'Conta x Item Caixa' },
+    { label: 'Grupo de Visão' },
+    { label: 'Item Caixa x HST/SHST/Lote' },
+    { label: 'Grupo de Item de Caixa' }
+  ];
+
+  segmentos = [
+    { nome: 'BB Leasing', codigo: 2, usuario: 'Sistema' },
+    { nome: 'BB DTVM Investidores', codigo: 4, usuario: 'Sistema' },
+    { nome: 'BB Consórcios', codigo: 5, usuario: 'Sistema' },
+    { nome: 'BB Corretora de Seguros e ADM', codigo: 6, usuario: 'Sistema' },
+    { nome: 'BB Seguros S.A.', codigo: 7, usuario: 'Sistema' }
+  ];
+
+
 }

@@ -1,3 +1,16 @@
-<div class="card flex justify-center">
-    <p-select [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" placeholder="Select a City" class="w-full md:w-56" />
+<div class="tela-segmento">
+  <p-card>
+    <div class=row>
+      <div class="col-4">
+      <mat-form-field>
+        <mat-label>Select an option</mat-label>
+        <mat-select disableRipple>
+          <mat-option value="1">Option 1</mat-option>
+          <mat-option value="2">Option 2</mat-option>
+          <mat-option value="3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
+    </div>
+  </p-card>
 </div>
