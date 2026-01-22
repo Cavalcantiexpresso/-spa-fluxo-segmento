@@ -43,7 +43,7 @@
           <ng-container matColumnDef="acoes">
             <th mat-header-cell *matHeaderCellDef> </th>
             <td mat-cell *matCellDef="let element">
-              <button mat-icon-button color="warn" aria-label="Excluir segmento" class="icone-remover">
+              <button mat-icon-button color="warn" aria-label="Excluir segmento" class="icone-remover" (click)="excluirSegimento(element.codigo)">
                 <mat-icon>delete</mat-icon>
               </button>
             </td>

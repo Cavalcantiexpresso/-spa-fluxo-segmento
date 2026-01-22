@@ -81,6 +81,12 @@ export class SegmentoComponent implements AfterViewInit {
     });
   }
 
+  excluirSegimento(codigo: number) {
+    this.dataSource.data = this.dataSource.data.filter(seg => seg.codigo !== codigo);
+
+}
+
+
   situacoes: Situacao[] = [
     { label : 'Nenhum', value:' '},
     { label: 'Ativo', value: 'ATIVO' },
