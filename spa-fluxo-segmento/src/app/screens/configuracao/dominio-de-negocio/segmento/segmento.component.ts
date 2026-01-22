@@ -8,6 +8,7 @@ import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { SegmentoConfirmarExclusaoComponent } from './segmento-confirmar-exclusao/segmento-confirmar-exclusao.component';
 
 const ELEMENT_DATA: Segmento[] = [
   { nome: 'AçaiPay Leasing', codigo: 2, usuario: 'Sistema' },
@@ -50,11 +51,15 @@ export interface Segmento {
 export class SegmentoComponent implements AfterViewInit {
 
   displayedColumns: string[] = ['nome', 'codigo', 'usuario', 'acoes'];
+
   dataSource = new MatTableDataSource<Segmento>(ELEMENT_DATA);
+
+
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog) { }
+
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -82,30 +87,27 @@ export class SegmentoComponent implements AfterViewInit {
   }
 
   excluirSegimento(codigo: number) {
-    this.dataSource.data = this.dataSource.data.filter(seg => seg.codigo !== codigo);
-
-}
+    const dialogRef = this.dialog.open(SegmentoConfirmarExclusaoComponent, {
+      width: '600px',
+      data: { codigo },
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      if (result && result.codigo) {
+        this.dataSource.data = this.dataSource.data.filter(seg => seg.codigo !== codigo);
+      }
+    });
+  }
 
 
   situacoes: Situacao[] = [
-    { label : 'Nenhum', value:' '},
+    { label: 'Nenhum', value: ' ' },
     { label: 'Ativo', value: 'ATIVO' },
     { label: 'Inativo', value: 'INATIVO' },
     { label: 'Desconhecido', value: 'DESCONHECIDO' }
   ];
-
   situacaoSelecionada = 'ATIVO';
 
-  abas = [
-    { label: 'Segmento' },
-    { label: 'Conta' },
-    { label: 'Item Caixa' },
-    { label: 'Item Caixa x Item Sistema' },
-    { label: 'Conta x Item Caixa' },
-    { label: 'Grupo de Visão' },
-    { label: 'Item Caixa x HST/SHST/Lote' },
-    { label: 'Grupo de Item de Caixa' }
-  ];
+
 
 
 }
