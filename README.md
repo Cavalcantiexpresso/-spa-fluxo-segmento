@@ -1,14 +1,7 @@
 
-
-
-📘 Projeto de Prática com Angular Material
-Este repositório foi criado apenas para prática e para explorar as mudanças recentes no Angular Material.
-O objetivo é testar componentes, verificar diferenças de comportamento e entender melhor a evolução da biblioteca.
-
-🚀 Status do Projeto
-✅ Funções principais já implementadas
-
-🔧 Algumas partes ainda em desenvolvimento
+##📘 SpaFluxoSegmento
+Projeto desenvolvido em Angular 17 com foco em fluxo de segmento dentro do design system .
+Este repositório foi criado para prática, estudo e evolução de componentes utilizando Angular Material e boas práticas de desenvolvimento.
 
 🎯 Foco em aprendizado e experimentação
 
@@ -22,8 +15,8 @@ Exemplo de componente em uso
 Área em desenvolvimento
 <img width="1360" height="651" alt="Captura de tela 2026-01-22 145902" src="https://github.com/user-attachments/assets/43f6c700-9f8e-458a-8839-13130c8efc6f" />
 
-📦 Tecnologias Utilizadas
-Angular
+🚀 Tecnologias Utilizadas
+Angular CLI 17.3.17
 
 Angular Material
 
@@ -35,7 +28,7 @@ Node.js
 Clone o repositório
 
 bash
-git clone https://github.com/seu-usuario/seu-repo.git
+git clone https://github.com/Cavalcantiexpresso/-spa-fluxo-segmento.git
 Instale as dependências
 
 bash
@@ -44,19 +37,28 @@ Execute o servidor de desenvolvimento
 
 bash
 ng serve
-Acesse no navegador
+Acesse em: http://localhost:4200
 
-Código
-http://localhost:4200
-📌 Próximos Passos
-[ ] Finalizar componentes em desenvolvimento
+🛠️ Estrutura de Código
+Gerar componentes
 
-[ ] Ajustar layout responsivo
+bash
+ng generate component nome-do-componente
+Gerar serviços, pipes, diretivas, guards, etc.
 
-[ ] Testar novos módulos do Angular Material
+bash
+ng generate service nome-do-servico
+📦 Build
+bash
+ng build
+Os artefatos serão gerados na pasta dist/.
 
-[ ] Documentar exemplos de uso
+✅ Testes
+Unitários (Karma/Jasmine)
 
-🧑‍💻 Contribuição
-é apenas para prática, mas sugestões e melhorias são bem-vindas!
-Sinta-se livre para abrir issues ou enviar pull requests.
+bash
+ng test
+End-to-End (E2E)
+
+bash
+ng e2e
