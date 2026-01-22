@@ -90,9 +90,10 @@ export class SegmentoComponent implements AfterViewInit {
     const dialogRef = this.dialog.open(SegmentoConfirmarExclusaoComponent, {
       width: '600px',
       data: { codigo },
-    })
-    dialogRef.afterClosed().subscribe(result => {
-      if (result && result.codigo) {
+    });
+
+    dialogRef.afterClosed().subscribe(confirmado => {
+      if (confirmado) {
         this.dataSource.data = this.dataSource.data.filter(seg => seg.codigo !== codigo);
       }
     });

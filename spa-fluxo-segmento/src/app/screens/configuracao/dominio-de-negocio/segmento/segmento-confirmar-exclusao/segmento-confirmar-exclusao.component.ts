@@ -11,8 +11,8 @@ import {
 
 @Component({
   selector: 'app-segmento-confirmar-exclusao',
-  imports: [
-    MatDialogModule,    
+  imports: [    
+    MatDialogModule,   
     MatDialogContent,
     MatDialogActions,
    
