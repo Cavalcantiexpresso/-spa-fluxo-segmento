@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+/* Angular Material prebuilt theme */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+  --acai-primary: #5C2D91; /* Açaí clássico */
+  --acai-accent: #F5C000;
+}
+
+/* Google Roboto font is loaded in index.html; set default font */
+body {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Garantir fundo visível para appearance="fill" */
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #ffffff;
+}
+
+/* Painel do mat-select (dropdown) */
+.mat-select-panel {
+  background-color: #ffffff;
+  color: rgba(0,0,0,0.87);
+}
+
+/* Melhorar contraste do paginator e alinhar cores */
+.mat-paginator {
+  color: rgba(0,0,0,0.87);
+}
+
+/* Usar paleta Açaí para botão incluir */
+.btn-incluir, .botao-incluir {
+  background-color: var(--acai-primary) !important;
+  color: #fff !important;
+}
+
+/* Ajustes finos de inputs/padding para se aproximar do protótipo */
+.mat-form-field .mat-form-field-infix {
+  padding: 0.4rem 0.6rem;
+}

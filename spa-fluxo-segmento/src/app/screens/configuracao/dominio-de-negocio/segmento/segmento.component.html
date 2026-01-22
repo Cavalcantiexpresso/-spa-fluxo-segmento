@@ -11,11 +11,54 @@
           </mat-form-field>
         </div>
       </div>
+
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+
+          <!-- nome segmento Column -->
+          <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef> NOME SEGMENTO </th>
+            <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+          </ng-container>
+
+          <!-- codigo Column -->
+          <ng-container matColumnDef="codigo">
+            <th mat-header-cell *matHeaderCellDef> CÓDIGO </th>
+            <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+          </ng-container>
+
+          <!-- usuario Column -->
+          <ng-container matColumnDef="usuario">
+            <th mat-header-cell *matHeaderCellDef> USUARIO RESPONSÁVEL </th>
+            <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+          </ng-container>
+
+          <!-- Symbol Column (deprecated) -->
+          <!-- <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element"> {{element.icone}} </td>
+          </ng-container> -->
+
+          <!-- actions Column -->
+          <ng-container matColumnDef="acoes">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-icon-button color="warn" aria-label="Excluir segmento" class="icone-remover">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </div>
+
+      <mat-card-actions class="acoes-card-actions">
+        <button mat-raised-button class="btn-incluir botao-incluir" aria-label="Incluir segmento" (click)="abrirIncluir()">INCLUIR SEGMENTO</button>
+      </mat-card-actions>
   </mat-card>
-
-
-
-
-
-
 </div>

@@ -6,10 +6,9 @@ import { SegmentoComponent } from "./screens/configuracao/dominio-de-negocio/seg
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
-    SegmentoComponent],
+    RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'spa-fluxo-segmento';

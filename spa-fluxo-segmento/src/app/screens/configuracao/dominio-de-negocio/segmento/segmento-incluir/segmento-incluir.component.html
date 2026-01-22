@@ -1,0 +1,23 @@
+<div class="segmento-incluir">
+  <h3>Incluir Segmento</h3>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="nome" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Código</mat-label>
+    <input matInput type="number" [(ngModel)]="codigo" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Usuário responsável</mat-label>
+    <input matInput [(ngModel)]="usuarioResponsavel" />
+  </mat-form-field>
+
+  <div class="acoes">
+    <button mat-raised-button color="primary" (click)="salvar()">Salvar</button>
+    <button mat-button (click)="cancelar()">Cancelar</button>
+  </div>
+</div>

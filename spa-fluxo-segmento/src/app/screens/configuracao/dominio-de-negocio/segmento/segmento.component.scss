@@ -3,3 +3,105 @@
   margin-left: 2rem;
     min-heugth: 500px;
 }
+
+.acoes-rodape {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.btn-incluir {
+  background-color: #f5c000;
+  color: #000;
+}
+
+/* centraliza verticalmente itens do paginator dentro da tela-segmento */
+.tela-segmento .mat-paginator {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* centraliza verticalmente o contador e controles */
+}
+
+/* range label do paginator centralizado e com largura mínima */
+.tela-segmento .mat-paginator .mat-paginator-range-label {
+  min-width: 120px;
+  text-align: center;
+  margin: 0 0.5rem;
+}
+
+/* alinha coluna de ações e centraliza o ícone */
+.tela-segmento td.mat-cell.mat-column-acoes,
+.tela-segmento th.mat-header-cell.mat-column-acoes {
+  text-align: center;
+  width: 72px;
+}
+
+.tela-segmento td.mat-cell.mat-column-acoes .mat-icon {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+/* estilo semelhante ao projeto BB - ajustes para AçaíPay */
+.botao-incluir {
+  float: right;
+  margin: 16px 18px 0 0;
+  background-color: var(--acai-primary);
+  color: #fff;
+}
+
+.icone-remover {
+  float: right;
+}
+
+.inf-scroll-card {
+  padding: 0px !important;
+}
+
+.inf-scroll {
+  max-height: 430px;
+  overflow: auto;
+}
+
+.mat-card .mat-card-content {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+/* manter paginator alinhado e contagem central */
+.tela-segmento .mat-paginator { align-items: center; }
+
+/* botão incluir: mais visível, maior e sem float */
+.btn-incluir, .botao-incluir {
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+  font-weight: 600;
+  background-color: var(--acai-primary) !important;
+  color: #fff !important;
+}
+
+/* ação do card alinhada à direita com padding */
+.acoes-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 24px 16px 24px;
+}
+
+/* remover float do icone e centralizar verticalmente */
+.icone-remover {
+  float: none;
+  margin: 0;
+}
+
+/* centraliza o label do paginator (contador) no centro do paginator */
+.tela-segmento .mat-paginator {
+  position: relative;
+}
+.tela-segmento .mat-paginator .mat-paginator-range-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 140px;
+  text-align: center;
+}
+
