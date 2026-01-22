@@ -3,7 +3,7 @@ import { SegmentoComponent } from './screens/configuracao/dominio-de-negocio/seg
 
 export const routes: Routes = [
 {
-    path: 'configuracao/dominio-de-negocio/segmento',
+    path: '',
     component: SegmentoComponent,
     data: {pageTitle: ''}
 }

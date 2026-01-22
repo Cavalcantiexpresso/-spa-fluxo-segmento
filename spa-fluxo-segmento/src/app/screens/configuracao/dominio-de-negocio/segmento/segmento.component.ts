@@ -1,22 +1,31 @@
-import { CardModule } from 'primeng/card';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 
+
+export interface Situacao {
+  label: string;
+  value: string;
+}
 
 
 
 @Component({
   selector: 'app-segmento',
   standalone: true,
-  imports: [CardModule],
+  imports: [CommonModule, MatCardModule, MatFormFieldModule, MatSelectModule],
   templateUrl: './segmento.component.html',
-  styleUrl: './segmento.component.scss'
+  styleUrls: ['./segmento.component.scss']
 })
-export class SegmentoComponent  {
+export class SegmentoComponent {
 
-  situacoes = [
+  situacoes: Situacao[] = [
     { label: 'Ativo', value: 'ATIVO' },
-    { label: 'Inativo', value: 'INATIVO' }
+    { label: 'Inativo', value: 'INATIVO' },
+    { label: 'Desconhecido', value: 'DESCONHECIDO' }
   ];
 
   situacaoSelecionada = 'ATIVO';
@@ -33,12 +42,11 @@ export class SegmentoComponent  {
   ];
 
   segmentos = [
-    { nome: 'BB Leasing', codigo: 2, usuario: 'Sistema' },
-    { nome: 'BB DTVM Investidores', codigo: 4, usuario: 'Sistema' },
-    { nome: 'BB Consórcios', codigo: 5, usuario: 'Sistema' },
-    { nome: 'BB Corretora de Seguros e ADM', codigo: 6, usuario: 'Sistema' },
-    { nome: 'BB Seguros S.A.', codigo: 7, usuario: 'Sistema' }
+    { nome: 'AçaiPay Leasing', codigo: 2, usuario: 'Sistema' },
+    { nome: 'AçaiPay DTVM Investidores', codigo: 4, usuario: 'Sistema' },
+    { nome: 'AçaiPay Consórcios', codigo: 5, usuario: 'Sistema' },
+    { nome: 'AçaiPay Corretora de Seguros e ADM', codigo: 6, usuario: 'Sistema' },
+    { nome: 'AçaiPay Seguros S.A.', codigo: 7, usuario: 'Sistema' }
   ];
-
 
 }

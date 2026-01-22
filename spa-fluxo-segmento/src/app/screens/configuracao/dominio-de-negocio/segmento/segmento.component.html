@@ -1,16 +1,21 @@
 <div class="tela-segmento">
-  <p-card>
-    <div class=row>
-      <div class="col-4">
-      <mat-form-field>
-        <mat-label>Select an option</mat-label>
-        <mat-select disableRipple>
-          <mat-option value="1">Option 1</mat-option>
-          <mat-option value="2">Option 2</mat-option>
-          <mat-option value="3">Option 3</mat-option>
-        </mat-select>
-      </mat-form-field>
+
+  <mat-card>
+      <div class=row>
+        <div class="col-4">
+          <mat-form-field appearance="fill">
+            <mat-label>Situação</mat-label>
+            <mat-select placeholder="Selecione">
+              <mat-option *ngFor="let situacao of situacoes" [value]="situacao.value">{{situacao.value}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
       </div>
-    </div>
-  </p-card>
+  </mat-card>
+
+
+
+
+
+
 </div>
