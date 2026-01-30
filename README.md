@@ -7,7 +7,7 @@ Este repositório foi criado para prática, estudo e evolução de componentes u
 
 ---
 
-## 🖼️ Capturas de Tela
+
 
 ### Tela inicial
 <img width="1338" height="631" alt="Captura de tela 2026-01-22 154037" src="https://github.com/user-attachments/assets/175461af-3a64-4eed-8302-7e80fadea610" />
